@@ -7,14 +7,20 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    VueDevTools(),
-  ],
+  plugins: [vue(), vueJsx(), VueDevTools()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
+  // css: {
+  //   // css预处理器
+  //   preprocessorOptions: {
+  //     // scss
+  //     scss: {
+  //       // 引入全局变量
+  //       additionalData: `@import "@/styles/variables.scss";`
+  //     }
+  //   }
+  // }
 })
